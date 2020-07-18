@@ -46,25 +46,28 @@ The requirements for a valid go test file
 // main.go
 package main
 
-func Square(n int) int {
-    return n * n
+func Square(r int) int {
+	return 3.14 * r * r
 }
 
 func main() {
-    Square(5, 5)
+    Circle(5, 5)
 }
 ```
 
 ```go
 // main_test.go
+
 package main
 
 import (
-    "testing"
+	"testing"
 )
 
-func TestSquare(t *testing.T) {
-    t.Log(Square(2))
+func TestCircle(t *testing.T) {
+	t.Log(Circle(5))
+}
+
 }
 ```
 
@@ -245,12 +248,6 @@ func TestHealthCheck(t *testing.T) {
     }
 }
 ```
-
-## TODO
-
-[ ] Testing Routines and Channels
-
-[ ] Benchmarking
 
 [testing]: https://golang.org/pkg/testing/
 [httptest]: https://golang.org/pkg/net/http/httptest
