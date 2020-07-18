@@ -46,7 +46,7 @@ The requirements for a valid go test file
 // main.go
 package main
 
-func Square(r int) int {
+func Circle(r int) int {
 	return 3.14 * r * r
 }
 
