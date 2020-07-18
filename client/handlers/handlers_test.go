@@ -7,13 +7,14 @@ import (
 )
 
 func TestHealthCheck(t *testing.T) {
-	// Create a request to pass to our handler. We don't have any query parameters for now, so we'll pass 'nil' as the third parameter.
+	// Create a request to pass to our handler.
+	// No query parameters for now, so we pass 'nil' as the third parameter.
 	request, err := http.NewRequest(http.MethodGet, "/health", nil)
 	if err != nil {
 		t.Fatal(err)
 	}
 
-	// We create a ResponseRecorder (which satisfies http.ResponseWriter) to record the response.
+	// Create a ResponseRecorder (which satisfies http.ResponseWriter) to record the response.
 	response := httptest.NewRecorder()
 	handler := http.HandlerFunc(HealthCheck)
 
